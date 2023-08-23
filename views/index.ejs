@@ -1,0 +1,23 @@
+<%- include('partials/header'); -%>
+
+  <div class="container">
+    <h1>ToDo List</h1>
+    <hr>
+    <form action="/delete" method="post">
+      <% taskList.forEach(function(items){%>
+        <div class="taskList container">
+          <h4>
+            <%=items.taskItem%>
+          </h4>
+          <input type="checkbox" onChange="this.form.submit()" name="crossBtn" value=<%=items._id%>>
+        </div>
+        <%})%>
+    </form>
+    <hr>
+    <form action="/" method="post">
+      <input name="taskName" type="text" id="taskInput" placeholder="Enter your task...">
+      <button type="submit" id="addTaskBtn">Add Task</button>
+    </form>
+  </div>
+
+  <%- include('partials/footer'); -%>
