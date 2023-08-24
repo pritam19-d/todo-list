@@ -8,6 +8,7 @@ const app = express();
 const dbName = "taskDB"
 
 const taskList = [];
+const PORT = process.env.PORT || 3000;
 
 mongoose.connect("mongodb+srv://pritamdas19:Test123@cluster0.kr7drhn.mongodb.net/?retryWrites=true&w=majority")
 const taskSchema = new mongoose.Schema({ taskItem: {
@@ -60,6 +61,6 @@ app.post("/delete", function (req, res) {
     res.redirect("/")
 })
 
-app.listen(3000, function () {
-    console.log("Server has started on port 3000");
+app.listen(PORT, function () {
+    console.log("Server has started on port" + PORT);
 })
