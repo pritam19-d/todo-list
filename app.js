@@ -7,7 +7,6 @@ const mongoose = require("mongoose")
 const app = express();
 const dbName = "taskDB"
 
-const taskList = [];
 const PORT = process.env.PORT || 3000;
 
 mongoose.connect("mongodb+srv://pritamdas19:Test123@cluster0.kr7drhn.mongodb.net/?retryWrites=true&w=majority")
