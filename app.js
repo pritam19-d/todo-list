@@ -10,8 +10,9 @@ const dbName = "taskDB"
 const PORT = process.env.PORT || 3000;
 
 mongoose.connect("mongodb+srv://pritamdas19:Test123@cluster0.kr7drhn.mongodb.net/?retryWrites=true&w=majority")
-const taskSchema = new mongoose.Schema({ taskItem: {
-    type: String,required:[true, "taskItem is empty"]} 
+const taskSchema = new mongoose.Schema({ 
+    taskItem: {
+        type: String,required:[true, "taskItem is empty"]} 
 })
 
 app.set('view engine', 'ejs');
